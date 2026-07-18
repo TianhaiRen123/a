@@ -1,0 +1,674 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>法院诉讼收费计算器</title>
+
+<style>
+.gjbg{
+	//background-image: url('images/zxwzy_04.gif');
+	background-repeat: repeat-x;
+	background-position-y:50%
+	}
+.ftitle {
+	font-size: 14px;
+	color: #000;
+}
+.menu_bg {
+	BACKGROUND-POSITION:  
+                  left bottom;
+	BACKGROUND-ATTACHMENT: fixed; 
+	//BACKGROUND-IMAGE: url('images/na2_12.gif'); 
+	BACKGROUND-REPEAT: no-repeat
+}
+.menu_all {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ffffff
+}
+.Btnwidth {
+	WIDTH: 50px; CURSOR: hand
+}
+td{
+	font-size: 12px;
+}
+</STYLE>
+
+
+</head>
+
+<body>
+<h6 align="left">
+<font color="#FF0000" size="2" face="仿宋_GB2312"><a href="index.htm">返回</a></font></font></h6>
+</h6>
+<TABLE cellSpacing=0 cellPadding=0 width=1001 align=center border=0>
+<TR><TD>
+<TABLE cellSpacing=0 cellPadding=0 width=1001 border=0>
+<TR>
+<TD vAlign=top width=1001 background=images/hy11.gif>
+<TABLE cellSpacing=0 cellPadding=0 width=933 align=center border=0>
+<TR>
+<TD class=title align=center height=80>
+<h1 align="center">全类型诉讼费计算器（供参考）</h1>
+</TD>
+</TR>
+<TR>
+<TD width=933 background=images/hs_x.gif height=30><TABLE width="100%" border=0 align="center" cellPadding=0 cellSpacing=0>
+<TR>
+<TD height=30 align="center" bgcolor="#ECF5FF" class="bg2">
+　</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR><TD height=480 align="center" valign="top" class="gjbg">
+<table width="99%" align="center">
+<tr>
+<td class="wz" align="center">　<p>　</td><SCRIPT language=JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</SCRIPT>
+<TABLE  border=0 cellPadding=0  cellSpacing=0 class=black id=Table3 >
+<TR>
+<TD><fieldset width="70%" style="width:500px; border : 1px solid #003366;text-align:left;COLOR:#006DC8;FONT-SIZE: 
+12px;font-family: Verdana;padding:5px;">
+<FORM id=Form1 name=form1>
+<legend><strong><font size="3">诉讼费速算（现行标准)</font></strong></legend>
+<P><B><img src="images/arrow_4.gif" width="12" height="11"> 请选择案件类型：</B> 
+<SELECT id=Select1 
+style="WIDTH: 180px" size=1 name=textfield4 value=""> <OPTION 
+value=10 selected>财产案件</OPTION> <OPTION value=12>离婚案件</OPTION> 
+<OPTION value=13>人身权案件</OPTION> <OPTION value=14>其他非财产案件</OPTION> 
+<OPTION value=15>知识产权案件（非财产）</OPTION> <OPTION 
+value=16>知识产权(财产)</OPTION> <OPTION value=17>劳动争议案件</OPTION> 
+<OPTION value=18>破产案件</OPTION> <OPTION value=19>管辖权异议</OPTION> 
+<OPTION value=20>公示催告</OPTION> <OPTION value=21>申请支付令</OPTION> 
+<OPTION value=31>商标专利行政案件</OPTION> <OPTION 
+value=32>其他行政案件</OPTION> 
+<OPTION value=34>申请认定或撤消仲裁案件</OPTION> <OPTION 
+value=50>执行案件</OPTION> <OPTION value=60>保全案件</OPTION></SELECT> </P>
+<P><img src="images/arrow_4.gif" width="12" height="11"><B> 请 输 入 标 的： </B>
+<INPUT id=Text1     style="WIDTH: 180px"  name=textfield2> 
+（点击下面数字按钮） </P>
+<B><img src="images/arrow_2.gif" width="11" height="11"> 是否属于适用简易程序或调解结案或撤诉案件：</B>
+<INPUT type=checkbox 
+name=checkbox>
+<P align=center><INPUT class=ok2 id=Button1 onclick=con() type=button value=计算诉讼费 name=button> 
+</P>
+<B><img src="images/50.gif" width="20" height="20" align="absmiddle"> 应缴纳的诉讼费： </B>
+<INPUT id=Text2 style="WIDTH: 100px" readOnly name=textfield3><span id="note"></span>
+
+</FORM>
+
+
+
+<FORM id=Form2 name=form2>
+<TABLE width=100% height="121" border=0 align=center bgcolor="#DDEEF5">
+
+<TR align="center" background="images/phbog.jpg">
+<TD width="33%"><INPUT class=Btnwidth id=Button2 onclick=getvalue(this) type=button size=40 value=0 name=button11>                </TD>
+<TD width="33%"><INPUT class=Btnwidth id=Button3 onclick=getvalue(this) type=button value=1 name=button5>                </TD>
+<TD width="33%"><INPUT class=Btnwidth id=Button4 onclick=getvalue(this) type=button value=2 name=button9>                </TD></TR>
+<TR align="center" background="images/phbog.jpg">
+<TD><INPUT class=Btnwidth id=Button5 onclick=getvalue(this) type=button value=3 name=button4>                </TD>
+<TD><INPUT class=Btnwidth id=Button6 onclick=getvalue(this) type=button value=4 name=button13>                </TD>
+<TD><INPUT class=Btnwidth id=Button7 onclick=getvalue(this) type=button value=5 name=button2>                </TD></TR>
+<TR align="center" background="images/phbog.jpg">
+<TD><INPUT class=Btnwidth id=Button8 onclick=getvalue(this) type=button value=6 name=button8>                </TD>
+<TD><INPUT class=Btnwidth id=Button9 onclick=getvalue(this) type=button value=7 name=button3>                </TD>
+<TD><INPUT class=Btnwidth id=Button10 onclick=getvalue(this) type=button value=8 name=button12>                </TD></TR>
+<TR align="center" background="images/phbog.jpg">
+<TD><INPUT class=Btnwidth id=Button11 onclick=getvalue(this) type=button value=9 name=button6>                </TD>
+<TD><INPUT class=Btnwidth id=Button12 onclick=getvalue(this) type=button value=. name=button10>                </TD>
+<TD><INPUT class=Btnwidth id=Button13 onclick=clearall() type=button value=清除 name=button7>                </TD></TR></TABLE>
+<div align="center">	　</div>
+</FORM></fieldset>		 </TD></TR></TABLE>
+<br>
+		  <SCRIPT language=JavaScript>
+   var kk=0;  
+   var dd = 0;
+   var ff = 0;
+
+   var ook;  
+
+var aa;  
+
+    function clearall(){  
+
+         kk=0;  
+         dd =0;
+         ff = 0;
+
+         document.form1.textfield2.value="";  
+
+         document.form1.textfield3.value="";  
+
+}  
+
+    function getvalue(ss){  
+
+			if ( ff==0&&ss.value=='.' )
+			{
+				alert("输入错误");
+				 document.form1.textfield2.value=""; 
+				 kk=0;
+				 ff=0;
+				 dd=0;
+				 return;
+			}
+           if(kk==1&&ss.value>=0&&ss.value<=9){  
+
+               alert("输入错误");  
+
+               document.form1.textfield2.value="";  
+
+                kk=0;
+				ff=0;
+				dd=0; 
+
+               return;  
+
+           }  
+           else
+           {
+			   if ( ss.value=='.' )
+			   {
+					if (dd==1)
+					{
+						alert("输入错误");
+						document.form1.textfield2.value="";  
+						kk=0;
+						ff=0;
+						dd=0;
+						return;
+					}
+					dd=1;
+			   }
+           }
+
+  
+
+  
+
+           if(kk==0&&ss.value==0) kk=1;  
+
+           else kk=2;  
+
+   
+
+           document.form1.textfield2.value+=ss.value;  
+			ff=1;
+             
+
+  
+
+   }  
+
+function con(){
+
+
+  //document.form1.textfield2.value:   诉讼标的值  
+
+    var bdrmb=document.form1.textfield2.value;
+
+    var sfbz=document.form1.textfield4.value;
+	
+    var t=document.form1.checkbox.checked;      
+
+    var arr = bdrmb.split(".");
+    
+    if ( arr.Length>2 )
+    {
+		alert("输入有误");
+		return false;
+    }
+
+    var ysssf=0;
+
+    switch(sfbz)
+
+      { case "10"://财产案件
+                  if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<100000){
+
+
+                      ysssf=bdrmb*0.025-200;}
+
+                  else if (bdrmb<200000){
+
+                      ysssf=bdrmb*0.02+300;}                      
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015+1300;}                      
+
+                  else if (bdrmb<1000000){
+
+                      ysssf=bdrmb*0.01+3800;}                      
+
+                  else if (bdrmb<2000000){
+
+                      ysssf=bdrmb*0.009+4800;} 
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.008+6800;} 
+
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.007+11800;}
+
+                  else if (bdrmb<20000000){
+
+                      ysssf=bdrmb*0.006+21800;}  
+
+                  else {ysssf=bdrmb*0.005+41800;} 
+                  
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                  break;   
+
+        case "16"://知识产权(财产)   
+        	if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=bdrmb*0.025-200;}
+
+                  else if (bdrmb<200000){
+
+                      ysssf=bdrmb*0.02+300;}                      
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015+1300;}                      
+
+                  else if (bdrmb<1000000){
+
+                      ysssf=bdrmb*0.01+3800;}                      
+
+                  else if (bdrmb<2000000){
+
+                      ysssf=bdrmb*0.009+4800;} 
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.008+6800;} 
+
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.007+11800;}
+
+                  else if (bdrmb<20000000){
+
+                      ysssf=bdrmb*0.006+21800;}  
+
+                  else {ysssf=bdrmb*0.005+41800;} 
+                  
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                  break;     
+
+        case "33"://财产争议行政案件，T注：不存在该情形
+
+                  if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=bdrmb*0.025-200;}
+
+                  else if (bdrmb<200000){
+
+                      ysssf=bdrmb*0.02+300;}                      
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015+1300;}                      
+
+                  else if (bdrmb<1000000){
+
+                      ysssf=bdrmb*0.01+3800;}                      
+
+                  else if (bdrmb<2000000){
+
+                      ysssf=bdrmb*0.009+4800;} 
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.008+6800;} 
+
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.007+11800;}
+
+                  else if (bdrmb<20000000){
+
+                      ysssf=bdrmb*0.006+21800;}  
+
+                  else {ysssf=bdrmb*0.005+41800;} 
+                  
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                  break;   
+
+      
+        case "12"://离婚案件(财产)
+
+                   ysssf=0;
+
+                  if (bdrmb>200000){ysssf=(bdrmb-200000)*0.005;}
+
+                  ysssf=ysssf+300;
+
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }
+                  
+                  document.all.note.innerHTML="（基数50至300元，此处按300元计算）"
+
+                  break;
+
+                  
+
+        case "13"://人身权案件
+
+                  if (bdrmb<50000){
+
+                      ysssf=400;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=400 + (bdrmb -50000)*0.01;}
+
+                  else{
+
+                      ysssf=900+(bdrmb-100000)*0.005;}  
+
+                 if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                 document.all.note.innerHTML="（基数100元至500元，此处按400元计算）"
+
+                 break;
+
+                  
+
+        case "14"://其他非财产案件
+
+                  ysssf=80;
+
+                 if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                 document.all.note.innerHTML="（每件交纳50元至100元，此处按80元计算）"
+                 break;
+
+                  
+
+        case "15"://知识产权案件
+
+                  ysssf=900;
+
+                 if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                 document.all.note.innerHTML="（每件交纳500元至1000元，此处按900元计算）"
+
+                 break;
+
+                  
+
+        case "17"://劳动争议案件
+
+                  ysssf=10;
+
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                  document.all.note.innerHTML="（每件交纳10元）"
+                  break;                                                      
+
+        case "18"://破产案件               
+
+                if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=bdrmb*0.025-200;}
+
+                  else if (bdrmb<200000){
+
+                      ysssf=bdrmb*0.02+300;}                      
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015+1300;}                      
+
+                  else if (bdrmb<1000000){
+
+                      ysssf=bdrmb*0.01+3800;}                      
+
+                  else if (bdrmb<2000000){
+
+                      ysssf=bdrmb*0.009+4800;} 
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.008+6800;}
+ 
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.007+11800;}
+
+                  else if (bdrmb<20000000){
+
+                  ysssf=bdrmb*0.006+21800;}  
+
+                  else {ysssf=bdrmb*0.005+41800;} 
+
+                 ysssf=ysssf/2;
+
+                if (ysssf>300000){ysssf=300000;}                     
+
+                 break;
+
+        case "19"://管辖权异议（50）
+
+                  ysssf=100;
+
+                  document.all.note.innerHTML="（异议不成立的，每件交纳50元至100元）"
+
+                  break;
+            
+        case "20"://公示催告
+
+                  ysssf=100;
+
+                  document.all.note.innerHTML="（每件交纳100元）"
+
+                  break;
+
+        case "21"://申请支付令
+        	if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=bdrmb*0.025-200;}
+
+                  else if (bdrmb<200000){
+
+                      ysssf=bdrmb*0.02+300;}                      
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015+1300;}                      
+
+                  else if (bdrmb<1000000){
+
+                      ysssf=bdrmb*0.01+3800;}                      
+
+                  else if (bdrmb<2000000){
+
+                      ysssf=bdrmb*0.009+4800;} 
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.008+6800;}
+ 
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.007+11800;}
+
+                  else if (bdrmb<20000000){
+
+                  ysssf=bdrmb*0.006+21800;}  
+
+                  else {ysssf=bdrmb*0.005+41800;} 
+
+                  ysssf=ysssf/3;
+
+                  break;
+
+        case "31"://商标专利行政案件
+
+                  ysssf=100;                  
+
+                  document.all.note.innerHTML="（每件交纳100元）"
+
+                  break;
+
+                  
+
+        case "32"://其他行政案件
+
+                  ysssf=50;
+
+                  document.all.note.innerHTML="（每件交纳50元）"
+
+                  break;
+
+       case "34"://申请撤销仲裁裁决或者认定仲裁协议效力
+
+                  ysssf=400;
+
+                  if(t){
+                                 
+                    ysssf=ysssf/2;           }      
+
+                  document.all.note.innerHTML="（每件交纳400元）"
+
+                  break;
+
+          
+         case "50"://执行案件
+                 
+                  if((bdrmb=="")||(bdrmb=="0")){
+
+                      ysssf=500;
+                      
+                      document.all.note.innerHTML="（没有执行金、价额的，每件交纳50元至500元）"}
+                
+                  else if (bdrmb<10000){
+
+                      ysssf=50;}
+
+                  else if (bdrmb<500000){
+
+                      ysssf=bdrmb*0.015-100;}
+
+                  else if (bdrmb<5000000){
+
+                      ysssf=bdrmb*0.01+2400;}
+
+                  else if (bdrmb<10000000){
+
+                      ysssf=bdrmb*0.005+27400;}
+
+                  else {ysssf=bdrmb*0.001+67400;}
+                  
+                  break;
+
+                  
+
+        case "60"://保全案件
+
+                  if (bdrmb<1000){
+
+                      ysssf=30;}
+
+                  else if (bdrmb<100000){
+
+                      ysssf=bdrmb*0.01+20;}
+
+                  else {ysssf=bdrmb*0.005+520;}
+                  
+
+                  if (ysssf>5000){
+
+                      ysssf=5000;}
+                 
+                  break;
+ }
+
+		document.form1.textfield3.value=ysssf;
+
+          var point=document.form1.textfield3.value.indexOf(".");
+
+          if (point!=-1){
+
+             if (document.form1.textfield3.value.substring(point+3,point+4)>4)
+
+                {ysssf+=0.01};
+
+             document.form1.textfield3.value=ysssf;
+
+             document.form1.textfield3.value=document.form1.textfield3.value.substring(0,point+3);
+
+          }
+
+  }
+
+		</SCRIPT>
+</tr>
+</table>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<p align="center">
+<img border="0" src="images/j0195384.gif" width="89" height="90"></p>
+<hr>
+<p align="center"><font face="仿宋_GB2312">设计人：田鹏学&nbsp;13053708620&nbsp; V3.0
+</font>
+<p align="center">2021年12月8日
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>新版诉讼费及代理费计算器</title>
+</head>
+<body onload=document.form.biaodi.focus()>
+<h6 align="left"><font color="#FF0000" size="2" face="仿宋_GB2312">
+<a href="index.htm">返回</a></font></h6>
+<h1 align="center">山东省2017年版涉财案件代理费计算器
+</h1>
+<form name ="form">
+<table align="center">
+<tr><td>诉讼标的额：</td><td><input type =text name ="biaodi" value=""></td><td><input type =button value = "计算" onclick ="return calculator()"></td></tr>
+<tr><td>代理费下限：</td><td><input type =text name ="result_x" value=""></td><td></td></tr>
+<tr><td>代理费上限：</td><td><input type =text name ="result_s" value=""></td><td></td></tr>
+</table>
+</form>
+
+<p align="center">
+<font color="#FF0000">注：</font><span lang="EN-US" style="font-size: 12.0pt; font-family: 宋体; color: #FF0000">500</span><span style="font-size: 12.0pt; font-family: 宋体; color: #FF0000">万元以上部分由受托所和委托人协商确定。</span></p>
+<p align="center">
+<span style="font-size: 12.0pt; font-family: 宋体; color: black">本收费标准自<span lang="EN-US">2017</span>年<span lang="EN-US">8</span>月<span lang="EN-US">15</span>日起执行，有效期至<span lang="EN-US">2022</span>年<span lang="EN-US">5</span>月<span lang="EN-US">31</span>日。</span></p>
+<p align="center">
+　</p>
+<p align="center">
+<img border="0" src="images/j0195384.gif" width="89" height="90"></p>
+<span style="font-size: 12pt;">
+<h1 align="center">
+<span style="font-family: 宋体; letter-spacing: -0.4pt"><a href="dlfbz.htm">阅读：<b style>管理办法和收费标准</b></a></span></h1>
+<hr>
+<p align="center"><font face="仿宋_GB2312">设计人：田鹏学&nbsp;13053708620&nbsp; V3.0
+</font>
+<p align="center">2021年12月8日
+</body>
+</html>
+
+<script language=javascript >
+function calculator()
+{
+var result_x=0;
+var biaodi = document.form.biaodi.value;
+	if(biaodi>0&&biaodi<=10000)
+	{
+	result_x=2500;
+	}
+	if(biaodi>10000&&biaodi<=100000)
+	{
+	result_x=eval(biaodi*0.06+1900);
+	}
+	if(biaodi>100000&&biaodi<=500000)
+	{
+	result_x=eval(biaodi*0.05+2900);
+	}
+	if(biaodi>500000&&biaodi<=1000000)
+	{
+	result_x=eval(biaodi*0.04+7900);
+	}
+	if(biaodi>1000000&&biaodi<=5000000)
+	{
+	result_x=eval(biaodi*0.03+17900);
+	}
+	document.form.result_x.value=Math.round(result_x);
+
+	if(result_x==0)
+	{
+	document.form.result_x.value="请先正确填写好标的额!"
+	document.form.biaodi.value="";
+	document.form.biaodi.focus();
+	}
+	if(biaodi>0&&biaodi<=10000)
+	{
+	result_s=3000;
+	}
+	if(biaodi>10000&&biaodi<=100000)
+	{
+	result_s=eval(biaodi*0.09+2100);
+	}
+	if(biaodi>100000&&biaodi<=500000)
+	{
+	result_s=eval(biaodi*0.06+5100);
+	}
+	if(biaodi>500000&&biaodi<=1000000)
+	{
+	result_s=eval(biaodi*0.05+10100);
+	}
+	if(biaodi>1000000&&biaodi<=5000000)
+	{
+	result_s=eval(biaodi*0.04+21100);
+	}
+	document.form.result_s.value=Math.round(result_s);
+	
+}
+
+</script>

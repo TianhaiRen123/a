@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>新版诉讼费及代理费计算器</title>
+</head>
+<body onload=document.form.biaodi.focus()>
+<h6 align="left"><font color="#FF0000" size="2" face="仿宋_GB2312">
+<a href="index.htm">返回</a></font></h6>
+<h1 align="center">2021年涉财案件代理费计算器</h1>
+<form name ="form">
+<table align="center">
+<tr><td>诉  讼  标  的  额：</td><td><input type =text name ="biaodi" value=""></td><td><input type =button value = "计算" onclick ="return calculator()"></td></tr>
+<tr><td>代理费（一审阶段）：</td><td><input type =text name ="result" value=""></td><td></td></tr>
+</table>
+</form>
+
+<p align="center">
+<img border="0" src="images/j0195384.gif" width="89" height="90"></p>
+<span style="font-size: 12pt;">
+<h1 align="center">
+<span style="font-family: 宋体; letter-spacing: -0.4pt"><a href="2021sfbz.htm">阅读：<b style>2021年律师最新收费标准（参考）</b></a></span></h1>
+<hr>
+<p align="center"><font face="仿宋_GB2312">设计人：田鹏学&nbsp;13053708620&nbsp; V3.0
+</font>
+<p align="center">2021年12月8日
+</body>
+</html>
+
+<script language=javascript >
+function calculator()
+{
+var result=0;
+var biaodi = document.form.biaodi.value;
+	if(biaodi>0&&biaodi<=100000)
+	{
+	result=eval(biaodi*0.07);
+	}
+	if(result<5000)
+	{
+	result=5000;
+	}
+	if(biaodi>100000&&biaodi<=1000000)
+	{
+	result=eval(biaodi*0.06+1000);
+	}
+	if(biaodi>1000000&&biaodi<=5000000)
+	{
+	result=eval(biaodi*0.05+11000);
+	}
+	if(biaodi>5000000&&biaodi<=10000000)
+	{
+	result=eval(biaodi*0.03+111000);
+	}
+	if(biaodi>10000000&&biaodi<=50000000)
+	{
+	result=eval(biaodi*0.01+311000);
+	}
+	if(biaodi>50000000)
+	{
+	result=eval(biaodi*0.005+561000);
+	}
+
+	document.form.result.value=Math.round(result);
+
+	if(result==0)
+	{
+	document.form.result.value="请先正确填写好标的额!"
+	document.form.biaodi.value="";
+	document.form.biaodi.focus();
+	}
+}
+
+</script>
